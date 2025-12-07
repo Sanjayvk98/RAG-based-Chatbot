@@ -26,27 +26,35 @@ Graph is cached with @st.cache_resource
 Sidebar: PDF upload and processing
 Main area: chat interface with message history
 Features: clear chat history, real-time responses, error handling
+
+
 Workflow
+
 User uploads PDFs → text extraction → chunking → vectorization → stored in ChromaDB
 User asks a question → graph execution:
 Retrieves relevant chunks
 Generates initial answer
 Refines the answer
 Returns the refined answer
+
 Technologies
+
 LangChain: document processing, embeddings, vector store
 LangGraph: workflow orchestration
 Streamlit: web interface
 ChromaDB: vector database
 HuggingFace: embeddings and DeepSeek LLM
 DeepSeek-V3.2-Exp: language model
+
 Features
+
 Multi-PDF support
 Persistent vector storage (ChromaDB)
 Two-stage generation (generate + refine)
 Conversation history
 Error handling with user feedback
 Semantic search for relevant context
+
 Configuration
 Requires HUGGINGFACEHUB_API_TOKEN or HF_TOKEN in .env
 Vector store persisted in chroma_db/
